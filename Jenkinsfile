@@ -2,8 +2,8 @@ pipeline {
   agent {
     docker {
       image 'node:lts-bullseye-slim'
-      args '-p 3000:3000'
       args '--env NODE_OPTION="--openssl-legacy-provider"'
+      args '-p 3000:3000'
     }
   }
   stages {
